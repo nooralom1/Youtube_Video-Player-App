@@ -16,7 +16,7 @@ class _VideoScreenState extends State<VideoScreen> {
   void initState() {
     final videoId = YoutubePlayer.convertUrlToId(videoURL);
     playerController = YoutubePlayerController(initialVideoId: videoId!,
-    flags: YoutubePlayerFlags(autoPlay: false)
+    flags: const YoutubePlayerFlags(autoPlay: false)
 
     );
     super.initState();
@@ -26,7 +26,7 @@ class _VideoScreenState extends State<VideoScreen> {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        title: Text("Video Play"),
+        title: const Text("Video Play"),
         centerTitle: true,
         backgroundColor: Colors.blue,
       ),
